@@ -63,6 +63,8 @@ MyApp.getInitialProps = async (appContext: AppContext) => {
 	if (typeof window === "undefined") {
 		const { getLoginId, findUserById } = require("../utils/server/auth/user.ts");
 		const appProps = await App.getInitialProps(appContext);
+		appProps.test = "test prop";
+		console.log("_app.tsx:appProps: " + JSON.stringify(appProps, null, 2));
 
 		const loginId = await getLoginId(appContext.ctx.req);
 		const loginData = await findUserById(loginId);

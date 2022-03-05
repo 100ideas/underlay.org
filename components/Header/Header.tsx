@@ -10,6 +10,7 @@ import HeaderProfileButton from "./HeaderProfileButton";
 const Header = () => {
 	const loginData = useLoginContext();
 	const { pathname } = useLocationContext();
+	console.log(loginData);
 	return (
 		<nav className={styles.header}>
 			<div className={styles.content}>
