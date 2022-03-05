@@ -60,6 +60,7 @@ const initSession = (query: Query) => {
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ token: session?.access_token }),
 			});
+			console.log("SIGNED_IN: " + event);
 			window.location.href = "/";
 		}
 

@@ -20,6 +20,7 @@ export const getNamespaceData = async (namespaceSlug: string) => {
 	});
 
 	if (!namespaceData) {
+		console.log("ERROR utils/server/queries: namespaceData missing");
 		return undefined;
 	}
 
